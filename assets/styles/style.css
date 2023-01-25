@@ -127,6 +127,9 @@ body {
 	width: 250px;
 	height: 250px;
 }
+#todo {
+	width: 500px;
+}
 
 #too {
 	width: 400px;
