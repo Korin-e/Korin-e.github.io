@@ -1,4 +1,3 @@
-OpenWindow('too');
 OpenWindow('home');
 
 var topZIndex = 1;

@@ -7,6 +7,19 @@ body {
 	font-family: 'Courier New', Courier, monospace;
 	overflow: hidden;
 }
+button {
+	font-family: 'Courier New', Courier, monospace;
+	background-color: #aae4ba81;
+	border: none;
+	padding: 3px 5px 3px 7px;
+	box-shadow: inset 2px 2px #ffffff, 2px 2px #00000080;
+}
+button:active {
+	box-shadow: inset 2px 2px #00000080, 2px 2px #ffffff;
+}
+button:hover {
+   background-color: #aae4b9c2;
+}
 .btn {
 	font-family: 'Courier New', Courier, monospace;
 	background-color: transparent;
@@ -40,7 +53,7 @@ body {
 .window {
 	width: fit-content;
 	height: fit-content;
-	margin: 0;
+	margin: 0px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -133,4 +146,11 @@ body {
 
 #too {
 	width: 400px;
+}
+
+#kinlist {
+	width: 300px;
+}
+#kinlist .window-content > * {
+	margin: 0px;
 }
