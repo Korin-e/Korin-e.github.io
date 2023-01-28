@@ -54,7 +54,7 @@ function PushToTop() {
 // ============================================================= Open Window
 
 function OpenWindow(windowID) {
-   $.getJSON( "./assets/pages/" + windowID + ".json", function( data ) {
+   $.getJSON( "./assets/pages/data/" + windowID + ".json", function( data ) {
       if ($('#'+windowID).length > 0 && data.single) {
          $('#'+windowID).css('z-index', ++topZIndex);
          return;
@@ -76,35 +76,6 @@ function OpenWindow(windowID) {
       $('#'+windowID+' .window-content').load('./assets/pages/'+windowID+'.html');
    });
 }
-
-/*
-function OpenWindow(windowName) 
-{  
-   // check for duplicate windows
-   if ($('#'+windowName).length > 0)
-   {
-      $('#'+windowName).css('z-index', ++topZIndex);
-      return;
-   }
-   // initial creation of window (main div and header)
-   $('#Desktop').append('<div class="window" id="'+windowName+'">'
-   + '<div class="window-header" id="'+windowName+'-header">'
-   + '<div class="row readonly">'
-   + '<div class="column window-title"></div>' // <<<<< icon and title
-   + '<div class="column window-x"><button type="button" class="btn close-btn">X</button></div>' 
-   + '</div></div></div>'); // <<<<< close button
-   // move to top
-   $('#'+windowName).css('z-index', ++topZIndex);
-   // create the rest of the window (subheader and content box)
-   $('#'+windowName).append('<div class="window-subheader readonly">'
-   + '<p>josh > pages > '+windowName+'</p></div>');
-   $('#'+windowName).append('<div class="window-content"></div>')
-   // load icon and title
-   $('#'+windowName+' .window-title').load('assets/pages/'+windowName+'.html .window-icon');
-   $('#'+windowName+' .window-content').load('assets/pages/'+windowName+'.html .container');
-   
-}
-*/
 
 function CloseWindow(event) {
    $(this).closest('.window').remove();

@@ -1,6 +1,10 @@
+:root {
+	--border-color: #ffffff;
+}
+
 body {
 	background-color: #A0D6AE;
-	background-image: url('../images/background-2.jpg');
+	background-image: url('../images/background.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -9,16 +13,16 @@ body {
 }
 button {
 	font-family: 'Courier New', Courier, monospace;
-	background-color: #aae4ba81;
-	border: none;
+	background-color: #9FE3C3;
+	border: 2px solid var(--border-color);
 	padding: 3px 5px 3px 7px;
-	box-shadow: inset 2px 2px #ffffff, 2px 2px #00000080;
+	box-shadow: inset 1px 2px #25253880, 2px 2px #25253880;
 }
 button:active {
-	box-shadow: inset 2px 2px #00000080, 2px 2px #ffffff;
+	box-shadow: inset 2px 3px #25253880, 1px 1px #25253880;
 }
 button:hover {
-   background-color: #aae4b9c2;
+   background-color: rgba(159, 227, 195, 0.5);
 }
 .btn {
 	font-family: 'Courier New', Courier, monospace;
@@ -58,8 +62,8 @@ button:hover {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: #D1FFEC;
-	border: 3px solid #ebebeb;
+	background-color: #d1ffec;
+	border: 3px solid var(--border-color);
 	box-shadow: 10px 10px #25253880;
 	/*white-space: nowrap;*/
 	overflow: hidden;
@@ -71,7 +75,7 @@ button:hover {
 /*--------vHEADERv---------*/
 .window-header {
 	background-color: #59BA8C;
-	border-bottom: 2px solid #ebebeb;
+	border-bottom: 2px solid var(--border-color);
 	color: white;
 	box-shadow: inset 0px 3px #25253880, 0px 3px #25253880;
 	padding: 8px 5px 4px 10px;
@@ -106,7 +110,7 @@ button:hover {
 .window-subheader {
 	background-color: #9FE3C3;
 	padding: 0px 0px 0px 10px;
-	border-bottom: 2px solid #ebebeb;
+	border-bottom: 2px solid var(--border-color);
 	height: 15px;
 }
 .window-subheader > p {
@@ -135,6 +139,8 @@ button:hover {
 }
 #home .window-content img {
 	width: 250px;
+	border: 3px solid var(--border-color);
+	box-shadow: 3px 3px #25253880;
 }
 #test {
 	width: 250px;
