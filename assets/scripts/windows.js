@@ -7,7 +7,7 @@ var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0; // initialzie positions
 $('#Desktop')
 .on('mousedown', '.window .window-header', WindowGrab)
 .on('mousedown', '.window', PushToTop)
-.on('click', '.window .close-btn', CloseWindow);
+.on('click', '.window .x-btn', CloseWindow);
 
 // ============================================================= Drag Window
 
@@ -64,7 +64,7 @@ function OpenWindow(windowID) {
       + '<div class="window-header">'
       + '<div class="row readonly">'
       + '<div class="column window-title"><img src="./assets/window-icons/'+data.icon+'.png"> '+data.title+'</div>'
-      + '<div class="column window-x"><button type="button" class="btn close-btn">X</button></div>'
+      + '<div class="column window-x"><button type="button" class="x-btn">X</button></div>'
       + '</div></div></div>');
       
       $('#'+windowID).css('z-index', ++topZIndex);

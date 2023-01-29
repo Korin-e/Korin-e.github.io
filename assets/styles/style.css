@@ -24,7 +24,7 @@ button:active {
 button:hover {
    background-color: rgba(159, 227, 195, 0.5);
 }
-.btn {
+.x-btn {
 	font-family: 'Courier New', Courier, monospace;
 	background-color: transparent;
 	border: none;
@@ -36,11 +36,12 @@ button:hover {
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
+   margin-left: 10px;
 }
-.btn:active {
+.x-btn:active {
 	box-shadow: inset 2px 2px #2E2E2E80, 2px 2px #e2e2e280;
 }
-.btn:hover {
+.x-btn:hover {
    background-color: #aae4b9c2;
 }
 .readonly { /*prevent highlighting and text cursor*/
@@ -55,7 +56,7 @@ button:hover {
 /* == === base window styles === == */
 
 .window {
-	width: fit-content;
+	width: max-content;
 	height: fit-content;
 	margin: 0px;
 	position: absolute;
@@ -123,7 +124,7 @@ button:hover {
 /*-------^SUBHEADER^--------*/
 /*--------vCONTENTv---------*/
 .window-content {
-	padding: 10px 10px 0px 10px;
+	padding: 10px 10px 10px 10px;
 }
 
 /* == === window overides === == */
@@ -131,7 +132,6 @@ button:hover {
 #home {
 	width: 700px;
 	height: auto;
-	white-space: inherit;
 }
 #home .column + .column {
 	margin-left: 15px;
@@ -141,21 +141,6 @@ button:hover {
 	width: 250px;
 	border: 3px solid var(--border-color);
 	box-shadow: 3px 3px #25253880;
-}
-#test {
-	width: 250px;
-	height: 250px;
-}
-#todo {
-	width: 500px;
-}
-
-#too {
-	width: 400px;
-}
-
-#kinlist {
-	width: 300px;
 }
 #kinlist .window-content > * {
 	margin: 0px;
