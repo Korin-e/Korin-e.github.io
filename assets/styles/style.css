@@ -20,6 +20,9 @@ body {
 	overflow: hidden;
 	color: var(--text-color);
 }
+
+/* == === Interactive === == */
+
 button {
 	font-family: 'Courier New', Courier, monospace;
 	background-color: var(--secondary-color);
@@ -27,6 +30,13 @@ button {
 	padding: 3px 5px 3px 7px;
 	box-shadow: inset 1px 2px var(--shadow-color), 2px 2px var(--shadow-color);
 	color: var(--text-color);
+	/*prevent buttons from being highlighted*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 button:active {
 	box-shadow: inset 2px 3px var(--shadow-color), 1px 1px var(--shadow-color);
@@ -40,12 +50,6 @@ button:hover {
 	color: var(--header-text-color);
 	border: none;
 	box-shadow: inset 2px 2px #ffffff80, 2px 2px #2E2E2E80;
-	/*prevent buttons from being highlighted*/
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 	margin-left: 10px;
 
@@ -59,6 +63,34 @@ button:hover {
 .x-btn:hover {
 	background-color: #ffffff46;
 }
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+}
+.dropdown-content {	
+	background-color: var(--back-color);
+	border: 2px solid var(--border-color);
+	box-shadow: inset 1px 2px var(--shadow-color), 2px 2px var(--shadow-color);
+	color: var(--text-color);
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown-content button {
+	display: block;
+	border: 0px;
+	margin: 0px;
+	box-shadow: 0px 0px;
+	width: 100%;
+}
+.dropdown-content button:hover {
+	background-color: var(--secondary-color-hover);
+  }
+
 .readonly { /*prevent highlighting and text cursor*/
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -146,6 +178,7 @@ button:hover {
 #home {
 	width: 700px;
 	height: auto;
+	overflow:visible;
 }
 #home .column + .column {
 	margin-left: 15px;

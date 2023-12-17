@@ -7,8 +7,16 @@
         <button onclick="OpenWindow('list')">Stuff</button>
         <button onclick="OpenWindow('todo')">open to do list</button>
         <p></p>
-        <button onclick="ChangeTheme('dark')">Dark Mode</button>
-        <button onclick="ChangeTheme('light')">Light Mode</button>
+        <div class="dropdown">
+            <button>Theme</button>
+            <div class="dropdown-content">
+                <button onclick="ChangeTheme('dark')">Dark</button>
+                <button onclick="ChangeTheme('light')">Light</button>
+                <button onclick="ChangeTheme('hell')">Hell</button>
+            </div>
+        </div>
+        <!-- <button onclick="ChangeTheme('dark')">Dark Mode</button>
+        <button onclick="ChangeTheme('light')">Light Mode</button> -->
     </div>
 </div>
 <script>

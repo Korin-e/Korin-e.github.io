@@ -1,0 +1,12 @@
+{
+    "borderColor": "black",
+    "backColor": "red",
+    "primaryColor": "red",
+    "secondaryColor": "yellow",
+    "secondaryColorHover": "yellow",
+    "shadowColor": "white",
+    "headerTextColor": "black",
+    "textColor": "black",
+    "wallpaper": "background-hell.png",
+    "iconStyle": "light"
+}
