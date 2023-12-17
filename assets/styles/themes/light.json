@@ -1,0 +1,12 @@
+{
+    "borderColor": "#FFFFFF",
+    "backColor": "#D1FFEC",
+    "primaryColor": "#59BA8C",
+    "secondaryColor": "#9FE3C3",
+    "secondaryColorHover": "9FE3C360",
+    "shadowColor": "#25253880",
+    "headerTextColor": "white",
+    "textColor": "black",
+    "wallpaper": "background-light.png",
+    "iconStyle": "light"
+}

@@ -1,56 +1,71 @@
 :root {
 	--border-color: #ffffff;
+	--back-color: #d1ffec;
+	--primary-color: #59BA8C;
+	--secondary-color: #9fe3c3;
+	--secondary-color-hover: #9fe3c360;
+	--shadow-color: #25253880;
+	--header-text-color: white;
+	--text-color: black;
+	--wallpaper: url('../images/background-light.png');
 }
 
 body {
 	background-color: #A0D6AE;
-	background-image: url('../images/background.jpg');
+	background-image: var(--wallpaper);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	font-family: 'Courier New', Courier, monospace;
 	overflow: hidden;
+	color: var(--text-color);
 }
 button {
 	font-family: 'Courier New', Courier, monospace;
-	background-color: #9FE3C3;
+	background-color: var(--secondary-color);
 	border: 2px solid var(--border-color);
 	padding: 3px 5px 3px 7px;
-	box-shadow: inset 1px 2px #25253880, 2px 2px #25253880;
+	box-shadow: inset 1px 2px var(--shadow-color), 2px 2px var(--shadow-color);
+	color: var(--text-color);
 }
 button:active {
-	box-shadow: inset 2px 3px #25253880, 1px 1px #25253880;
+	box-shadow: inset 2px 3px var(--shadow-color), 1px 1px var(--shadow-color);
 }
 button:hover {
-   background-color: rgba(159, 227, 195, 0.5);
+	background-color: var(--secondary-color-hover);
 }
 .x-btn {
 	font-family: 'Courier New', Courier, monospace;
 	background-color: transparent;
+	color: var(--header-text-color);
 	border: none;
-	box-shadow: inset 2px 2px #e2e2e280, 2px 2px #2E2E2E80;
-   /*prevent buttons from being highlighted*/
-   -webkit-touch-callout: none;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
-   margin-left: 10px;
+	box-shadow: inset 2px 2px #ffffff80, 2px 2px #2E2E2E80;
+	/*prevent buttons from being highlighted*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-left: 10px;
+
+   	font-weight: bolder;
+	font-size: 90%;
+	transform: translate(0px, -2px);
 }
 .x-btn:active {
 	box-shadow: inset 2px 2px #2E2E2E80, 2px 2px #e2e2e280;
 }
 .x-btn:hover {
-   background-color: #aae4b9c2;
+	background-color: #ffffff46;
 }
 .readonly { /*prevent highlighting and text cursor*/
-   -webkit-touch-callout: none;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* == === base window styles === == */
@@ -63,9 +78,9 @@ button:hover {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: #d1ffec;
+	background-color: var(--back-color);
 	border: 3px solid var(--border-color);
-	box-shadow: 10px 10px #25253880;
+	box-shadow: 10px 10px var(--shadow-color);
 	/*white-space: nowrap;*/
 	overflow: hidden;
 }
@@ -75,10 +90,10 @@ button:hover {
 
 /*--------vHEADERv---------*/
 .window-header {
-	background-color: #59BA8C;
+	background-color: var(--primary-color);
 	border-bottom: 2px solid var(--border-color);
-	color: white;
-	box-shadow: inset 0px 3px #25253880, 0px 3px #25253880;
+	color: var(--header-text-color);
+	box-shadow: inset 0px 3px var(--shadow-color), 0px 3px var(--shadow-color);
 	padding: 8px 5px 4px 10px;
 
 }
@@ -100,16 +115,15 @@ button:hover {
 	text-align: right;
 	overflow: visible;
 }
-.window-header > div > div + div > button {
+/*.window-header > div > div + div > button {
 	font-weight: bolder;
-	color: white;
 	font-size: 90%;
 	transform: translate(0px, -2px);
-}
+}*/
 /*--------^HEADER^---------*/
 /*-------vSUBHEADERv--------*/
 .window-subheader {
-	background-color: #9FE3C3;
+	background-color: var(--secondary-color);
 	padding: 0px 0px 0px 10px;
 	border-bottom: 2px solid var(--border-color);
 	height: 15px;
@@ -140,8 +154,12 @@ button:hover {
 #home .window-content img {
 	width: 250px;
 	border: 3px solid var(--border-color);
-	box-shadow: 3px 3px #25253880;
+	box-shadow: 3px 3px var(--shadow-color);
 }
 #kinlist .window-content > * {
 	margin: 0px;
 }
+
+/* .column.window-title {
+	background-color: Red;
+} */
