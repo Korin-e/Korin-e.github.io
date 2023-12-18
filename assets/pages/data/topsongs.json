@@ -3,5 +3,5 @@
     "sub": "korin > home > list > topsongs",
     "icon": "file-icon",
     "resizable": false,
-    "single": true
+    "unique": false
 }

@@ -1,5 +1,7 @@
 var root = $(':root').get(0).style;
 
+ChangeTheme('dark');
+
 function ChangeTheme(theme) {
     $.getJSON( "./assets/styles/themes/" + theme + ".json", function( data ) {
         root.setProperty('--border-color', data.borderColor);

@@ -3,5 +3,5 @@
     "sub": "korin > home > todo",
     "icon": "file-icon",
     "resizable": false,
-    "single": true
+    "unique": true
 }

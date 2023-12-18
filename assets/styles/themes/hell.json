@@ -4,7 +4,7 @@
     "primaryColor": "red",
     "secondaryColor": "yellow",
     "secondaryColorHover": "yellow",
-    "shadowColor": "white",
+    "shadowColor": "#FFFFFFDD",
     "headerTextColor": "black",
     "textColor": "black",
     "wallpaper": "background-hell.png",

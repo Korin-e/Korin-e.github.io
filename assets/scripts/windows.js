@@ -55,15 +55,25 @@ function PushToTop() {
 
 function OpenWindow(windowID) {
    $.getJSON( "./assets/pages/data/" + windowID + ".json", function( data ) {
-      if ($('#'+windowID).length > 0 && data.single) {
+      starter = "";
+      windowType = windowID;
+      if ($('#'+windowID).length > 0 && data.unique) {
          $('#'+windowID).css('z-index', ++topZIndex);
          return;
       }
+      else if (!data.unique) {
+         starter = '<div class="window ' + windowID;
+         windowID += ($('.'+windowID).length + 1).toString();
+         starter += '" id="'+windowID+'">';
+      }
+      else {
+         starter = '<div class="window" id="'+windowID+'">'
+      }
 
-      $('#Desktop').append('<div class="window" id="'+windowID+'">'
+      $('#Desktop').append(starter
       + '<div class="window-header">'
       + '<div class="row readonly">'
-      + '<div class="column window-title"><img src="./assets/window-icons/'+data.icon+'.png"> '+data.title+'</div>'
+      + '<div class="column window-title"><img class="icon" src="./assets/icons/'+data.icon+'.png"> '+data.title+'</div>'
       + '<div class="column window-x"><button type="button" class="x-btn">X</button></div>'
       + '</div></div></div>');
       
@@ -73,7 +83,7 @@ function OpenWindow(windowID) {
       + '<p>'+data.sub+'</p></div>');
 
       $('#'+windowID).append('<div class="window-content"></div>');
-      $('#'+windowID+' .window-content').load('./assets/pages/'+windowID+'.html');
+      $('#'+windowID+' .window-content').load('./assets/pages/'+windowType+'.html');
    });
 }
 

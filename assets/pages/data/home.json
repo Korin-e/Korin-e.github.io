@@ -3,5 +3,5 @@
     "sub": "korin > home",
     "icon": "home-icon",
     "resizable": false,
-    "single": true
+    "unique": true
 }
